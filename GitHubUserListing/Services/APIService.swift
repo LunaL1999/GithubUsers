@@ -49,7 +49,6 @@ struct APIService {
         do {
             return try decoder.decode([User].self, from: data)
         } catch {
-            print(error)
             throw APIError.dataError
         }
     }
@@ -68,7 +67,6 @@ struct APIService {
         do {
             return try decoder.decode([Repository].self, from: data)
         } catch {
-            print(error)
             throw APIError.dataError
         }
     }

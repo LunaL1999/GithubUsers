@@ -31,6 +31,14 @@ import SwiftUI
         }
     }
     
+    var followersCountLabel: String {
+        copy.followersLabel + String(userDetails?.followers ?? 0)
+    }
+    
+    var followingCountLabel: String {
+        copy.followingLabel + String(userDetails?.following ?? 0)
+    }
+    
     func fetchDetails() async {
         do {
             userDetails = try await APIService.shared.getUserDetails(for: username)

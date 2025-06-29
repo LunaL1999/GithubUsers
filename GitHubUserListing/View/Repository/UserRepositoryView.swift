@@ -109,12 +109,12 @@ struct UserRepositoryView: View {
             HStack {
                 StatsView(
                     systemIcon: "person.2",
-                    label: "\(viewModel.copy.followersLabel)\(viewModel.userDetails?.followers ?? 0)"
+                    label: viewModel.followersCountLabel
                 )
                 Spacer()
                 StatsView(
                     systemIcon: "person.and.arrow.left.and.arrow.right.outward",
-                    label: "\(viewModel.copy.followingLabel)\(viewModel.userDetails?.following ?? 0)"
+                    label: viewModel.followingCountLabel
                 )
             }
             if let location = viewModel.userDetails?.location {
